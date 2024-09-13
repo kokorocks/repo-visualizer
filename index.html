@@ -69,9 +69,9 @@ window.onload = function(){
         return hashHex; // Display the hash
     }
     // Replace 'YOUR_GITHUB_USERNAME' with your GitHub username
-    const username = 'kokos-labs';
-    const apiUrl = `https://api.github.com/users/${username}/repos`;
-    const url = 'https://corsproxy.io/?' + encodeURIComponent(apiUrl)
+    let username = 'kokos-labs';
+    let apiUrl = `https://api.github.com/users/${username}/repos`;
+    let url = 'https://corsproxy.io/?' + encodeURIComponent(apiUrl)
 
     async function fetchRepoInfo() {
         try {
@@ -94,5 +94,6 @@ window.onload = function(){
     fetchRepoInfo();
 }
         </script>
+        <input placeholder='put your github username'>
     </body>
     </html>    
