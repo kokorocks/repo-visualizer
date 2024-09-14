@@ -85,4 +85,4 @@ window.onload = function(){
         }}
     fetchRepoInfo();
 }color_username('kokorocks')
-document.getElementById('btn').onclick = function(){color_username(document.getElementById('username').value)}}
+document.getElementById('btn').onclick = function(){document.getElementById('response').innerHTML='';color_username(document.getElementById('username').value)}}
