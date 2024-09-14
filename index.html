@@ -10,7 +10,7 @@
         
         <script>
 function color_hash(hash) {
-    const canvas = document.getElementById('myCanvas');
+    const canvas = document.getElementById('repos');
     const ctx = canvas.getContext('2d');
 
     const width = 16;  // Width of the canvas in pixels
@@ -68,8 +68,9 @@ window.onload = function(){
         const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join(''); // Convert byte array to hex string
         return hashHex; // Display the hash
     }
+    function color_username(username){
     // Replace 'YOUR_GITHUB_USERNAME' with your GitHub username
-    let username = 'kokorocks'//'kokos-labs';
+    let username = //'kokos-labs';
     let apiUrl = `https://api.github.com/users/${username}/repos`;
     let url = 'https://corsproxy.io/?' + encodeURIComponent(apiUrl)
 
@@ -92,8 +93,8 @@ window.onload = function(){
             console.error(error)
         }}
     fetchRepoInfo();
-}
+}color_username('kokorocks')}
         </script>
-        <input placeholder='put your github username'>
+        <input placeholder='kokorocks' id='username'><button onclick="color_username(document.getElementById('username'))"></button>
     </body>
     </html>    
