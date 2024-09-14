@@ -93,8 +93,9 @@ window.onload = function(){
             console.error(error)
         }}
     fetchRepoInfo();
-}color_username('kokorocks')}
+}color_username('kokorocks')
+function color(){color_username(document.getElementById('username').value)}
         </script>
-        <input placeholder='kokorocks' id='username'><button onclick="color_username(document.getElementById('username').value)">repo hash</button>
+        <input placeholder='kokorocks' id='username'><button onclick="color()">repo hash</button>
     </body>
     </html>    
