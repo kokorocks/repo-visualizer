@@ -61,7 +61,7 @@ window.onload = function(){
     // Replace 'YOUR_GITHUB_USERNAME' with your GitHub username
     //'kokos-labs';
     let apiUrl = `https://api.github.com/users/${username}/repos`;
-    let url = 'https://corsproxy.io/?' + encodeURIComponent(apiUrl)
+    let url = 'https://corsproxy.io/?url=' + encodeURIComponent(apiUrl)
 
     async function fetchRepoInfo() {
         try {
